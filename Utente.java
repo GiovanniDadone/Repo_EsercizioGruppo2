@@ -1,5 +1,3 @@
-package Repo_EsercizioGruppo2;
-
 import java.util.ArrayList;
 
 // Creazione classe Utente

@@ -25,22 +25,19 @@ public class Main {
                     biblioteca.addLibro();
                     break;
                 case 2:
-                    biblioteca.addRisorsa();
-                    break;
-                case 3:
                     biblioteca.addEbook();
                     break;
-                case 4:
-                    biblioteca.aggiugniUtente();
+                case 3:
+                    biblioteca.aggiungiUtente();
                     break;
-                case 5:
+                case 4:
                     biblioteca.stampaDatiRisorse();
                     break;
-                case 6:
+                case 5:
                     biblioteca.stampaDatiUtenti();
                     break;
-                case 7:
-                    biblioteca.ricercaRisorsa();
+                case 6:
+                    biblioteca.ricercaRisorsa(GlobalScanner.readStringInput());
                     break;
                 case 0:
                     System.out.println("Arrivederci e grazie...");
