@@ -41,7 +41,10 @@ public class Risorsa {
 
 }
 
+//classe Libro figlia di Risorsa
 class Libro extends Risorsa {
+
+    //variabile univoca
     private String autore;
 
     public Libro(String titolo, int annoPubblicazione, String codice, String autore) {
@@ -65,7 +68,10 @@ class Libro extends Risorsa {
 
 }
 
+//classe Rivista figlia di Risorsa
 class Rivista extends Risorsa {
+
+    //variabile univoca
     private int numero;
 
     public Rivista(String titolo, int annoPubblicazione, String codice, int numero) {
@@ -89,7 +95,9 @@ class Rivista extends Risorsa {
 
 }
 
+//classe Ebook figlia di Risorsa
 class Ebook extends Risorsa {
+    //variabile univoca
     private String formato;
 
     public Ebook(String titolo, int annoPubblicazione, String codice, String formato) {
