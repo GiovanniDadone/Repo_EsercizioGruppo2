@@ -103,6 +103,11 @@ public class Biblioteca {
         System.out.println("Inserire il codice univoco della risorsa");
         codiceId = GlobalScanner.readStringInput();
 
+        while (codiceId.isBlank()) {
+            System.out.println("Inserire un codice univoco non vuoto");
+            codiceId = GlobalScanner.readStringInput();
+        }
+
         for (int i = 0; i < risorseDisponibili.size(); i++) {
             // controlla se è stato inserito un codice id già esistente
             if (risorseDisponibili.get(i).getCodice().equals(codiceId)) {
@@ -111,16 +116,14 @@ public class Biblioteca {
 
                 // resetta l'index
                 i = -1;
-                continue;
-            }
-
-            // se l'input non è valido
-            while (codiceId.isEmpty()) {
+            } else {
                 System.out.println("Inserire un codice univoco valido");
                 codiceId = GlobalScanner.readStringInput();
 
                 // resetta l'index
                 i = -1;
+                System.out.println(i);
+
             }
         }
 
@@ -161,22 +164,25 @@ public class Biblioteca {
 
     public void addRivista() {
         // variabili locali
-        int numRivista = 0;
+        String numRivista = "";
         Risorsa nuovaRivista = aggiungiRisorsa();
+        int num;
 
-        // input numRivista
-        System.out.println("Inserire il numero della rivista");
-        numRivista = GlobalScanner.readIntInput();
-
-        // se l'input non e' corretto
-        while (numRivista < 0) {
+        while (true) {
             // input numRivista
-            System.out.println("Inserire un numero valido");
-            numRivista = GlobalScanner.readIntInput();
+            System.out.println("Inserire il numero della rivista");
+            numRivista = GlobalScanner.readStringInput();
+
+            //check che non sia vuoto
+            num = (numRivista.isBlank()) ? 0 : Integer.parseInt(numRivista);
+            if (num > 0) {
+                break;
+            }
+            System.out.println("Input non valido");
         }
 
         risorseDisponibili.add(new Rivista(nuovaRivista.getTitolo(), nuovaRivista.getAnnoPubblicazione(),
-                nuovaRivista.getCodice(), numRivista));
+                nuovaRivista.getCodice(), num));
     }
 
     public void addEbook() {
@@ -185,7 +191,7 @@ public class Biblioteca {
         Risorsa nuovoEbook = aggiungiRisorsa();
 
         // input ebookFormato
-        System.out.println("Inserire il nome dell'autore del libro");
+        System.out.println("Inserire il nome formato dell'e-book");
         ebookFormato = GlobalScanner.readStringInput();
 
         // se l'input non e' corretto
