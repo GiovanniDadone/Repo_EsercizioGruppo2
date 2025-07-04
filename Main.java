@@ -2,19 +2,18 @@ public class Main {
     public static void main(String[] args) {
 
         GlobalScanner.InitScannerInputs();
-        
+
         Biblioteca biblioteca = new Biblioteca("Biblioteca");
 
         int scelta;
         do {
             System.out.println("\n--- Menu Biblioteca ---");
             System.out.println("1. Aggiungi libro");
-            System.out.println("2. Aggiungi risorsa");
-            System.out.println("3. Aggiungi ebook");
-            System.out.println("4. Aggiungi utente");
-            System.out.println("5. Visualizza dettagli risorse");
-            System.out.println("6. Visualizza dettagli utenti");
-            System.out.println("7. Ricerca risorsa per titolo");
+            System.out.println("2. Aggiugni Ebook");
+            System.out.println("3. Aggiungi utente");
+            System.out.println("4. Visualizza dettagli risorse");
+            System.out.println("5. Visualizza dettagli utenti");
+            System.out.println("6. Ricerca risorsa per titolo");
             System.out.println("0. Esci");
             System.out.print("- Scelta: ");
             scelta = GlobalScanner.readIntInput();
