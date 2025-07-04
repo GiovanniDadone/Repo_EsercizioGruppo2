@@ -1,8 +1,8 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
+        GlobalScanner.InitScannerInputs();
+        
         Biblioteca biblioteca = new Biblioteca("Biblioteca");
 
         int scelta;
@@ -17,8 +17,7 @@ public class Main {
             System.out.println("7. Ricerca risorsa per titolo");
             System.out.println("0. Esci");
             System.out.print("- Scelta: ");
-            scelta = scanner.nextInt();
-            scanner.nextLine();
+            scelta = GlobalScanner.readIntInput();
 
             switch (scelta) {
                 case 1:
@@ -47,6 +46,6 @@ public class Main {
             }
         } while (scelta != 0);
 
-        scanner.close();
+        GlobalScanner.CloseScannerInputs();
     }
 }
