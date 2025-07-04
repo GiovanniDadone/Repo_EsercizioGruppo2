@@ -34,8 +34,8 @@ public abstract class Risorsa {
     }
 
     public String visualizzaDettagli() {
-        return "Risorsa [Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo=" + titolo + ", annoPubblicazione="
-                + annoPubblicazione + ", codice=" + codice + "]";
+        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + titolo + ", annoPubblicazione:"
+                + annoPubblicazione + ", codice:" + codice + "]";
     }
 
 }
@@ -50,8 +50,8 @@ class Libro extends Risorsa {
 
     @Override
     public String visualizzaDettagli() {
-        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo=" + getTitolo() + ", annoPubblicazione="
-                + getAnnoPubblicazione() + ", codice=" + getCodice() + ", autore: " + getAutore() +"]";
+        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
+                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", autore: " + getAutore() +"]";
     }
 
     public String getAutore() {
@@ -74,8 +74,8 @@ class Rivista extends Risorsa {
 
     @Override
     public String visualizzaDettagli() {
-        // TODO Auto-generated method stub
-        return super.visualizzaDettagli();
+        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
+                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", numero rivista: " + getNumero() +"]";
     }
 
     public int getNumero() {
@@ -98,8 +98,8 @@ class Ebook extends Risorsa {
 
     @Override
     public String visualizzaDettagli() {
-        // TODO Auto-generated method stub
-        return super.visualizzaDettagli();
+        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
+                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", formato e-book: " + getFormato() +"]";
     }
 
     public String getFormato() {
