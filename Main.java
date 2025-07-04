@@ -35,7 +35,7 @@ public class Main {
                     biblioteca.stampaDatiUtenti();
                     break;
                 case 6:
-                    biblioteca.ricercaRisorsa(GlobalScanner.readStringInput());
+                    biblioteca.ricercaRisorsa();
                     break;
                 case 0:
                     System.out.println("Arrivederci e grazie...");

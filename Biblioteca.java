@@ -127,16 +127,15 @@ public class Biblioteca {
         return new Risorsa(titoloRisorsa, annoPubblicazione, codiceId);
     }
 
-    public boolean ricercaRisorsa(String titolo) {
+    public void ricercaRisorsa() {
+        System.out.println("Inserisci titolo: ");
+        String titolo2 = GlobalScanner.readStringInput();
         for (Risorsa risorsa : risorseDisponibili) {
-            if (risorsa.getTitolo().equalsIgnoreCase(titolo)) {
+            if (risorsa.getTitolo().equalsIgnoreCase(titolo2)) {
                 risorsa.visualizzaDettagli();
-                return true;
             }
         }
-
         System.out.println("Risorsa non trovata");
-        return false;
     }
 
     public void addLibro() {
