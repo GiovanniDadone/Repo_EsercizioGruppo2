@@ -26,7 +26,7 @@ public class Biblioteca {
         nome = GlobalScanner.readStringInput();
 
         // se l'input non e' corretto
-        while (nome.isEmpty()) {
+        while (nome.isBlank()) {
             // input titoloRisorsa
             System.out.println("Inserire un nome valido");
             nome = GlobalScanner.readStringInput();
@@ -49,7 +49,7 @@ public class Biblioteca {
             }
 
             // se l'input non è valido
-            while (idUtente.isEmpty()) {
+            while (idUtente.isBlank()) {
                 // input idUtente
                 System.out.println("Inserire un id valido");
                 idUtente = GlobalScanner.readStringInput();
@@ -83,7 +83,7 @@ public class Biblioteca {
         titoloRisorsa = GlobalScanner.readStringInput();
 
         // se l'input non e' corretto
-        while (titoloRisorsa.isEmpty()) {
+        while (titoloRisorsa.isBlank()) {
             // input titoloRisorsa
             System.out.println("Inserire un titolo valido");
             titoloRisorsa = GlobalScanner.readStringInput();
@@ -152,7 +152,7 @@ public class Biblioteca {
         autoreLibro = GlobalScanner.readStringInput();
 
         // se l'input non e' corretto
-        while (autoreLibro.isEmpty()) {
+        while (autoreLibro.isBlank()) {
             // input autoreLibro
             System.out.println("Inserire un nome valido");
             autoreLibro = GlobalScanner.readStringInput();
@@ -195,7 +195,7 @@ public class Biblioteca {
         ebookFormato = GlobalScanner.readStringInput();
 
         // se l'input non e' corretto
-        while (ebookFormato.isEmpty()) {
+        while (ebookFormato.isBlank()) {
             // input ebookFormato
             System.out.println("Inserire un nome valido");
             ebookFormato = GlobalScanner.readStringInput();
