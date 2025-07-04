@@ -3,12 +3,15 @@ public class Risorsa {
     private int annoPubblicazione;
     private String codice;
 
+    //costruttore che viene richiamato col super dagli altri costruttori
     public Risorsa(String titolo, int annoPubblicazione, String codice) {
         this.titolo = titolo;
         this.annoPubblicazione = annoPubblicazione;
         this.codice = codice;
     }
 
+
+    //getter e setter generali d'ordinanza
     public String getTitolo() {
         return titolo;
     }
@@ -32,13 +35,14 @@ public class Risorsa {
     public void setCodice(String codice) {
         this.codice = codice;
     }
-
+                
+                        
     public void visualizzaDettagli() {
         System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + titolo + ", annoPubblicazione:"
                 + annoPubblicazione + ", codice:" + codice + "]");
 
     }
-
+ 
 }
 
 //classe Libro figlia di Risorsa
@@ -48,11 +52,14 @@ class Libro extends Risorsa {
     private String autore;
 
     public Libro(String titolo, int annoPubblicazione, String codice, String autore) {
+
+        //uso del super
         super(titolo, annoPubblicazione, codice);
         this.autore = autore;
     }
 
-    @Override
+                
+                         
     public void visualizzaDettagli() {
         System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
                 + getAnnoPubblicazione() + ", codice:" + getCodice() + ", autore: " + getAutore() +"]");
@@ -65,10 +72,10 @@ class Libro extends Risorsa {
     public void setAutore(String autore) {
         this.autore = autore;
     }
-
+ 
 }
 
-//classe Rivista figlia di Risorsa
+//clas se Rivista figlia di Risorsa
 class Rivista extends Risorsa {
 
     //variabile univoca
@@ -77,9 +84,10 @@ class Rivista extends Risorsa {
     public Rivista(String titolo, int annoPubblicazione, String codice, int numero) {
         super(titolo, annoPubblicazione, codice);
         this.numero = numero;
-    }
+    } 
 
-    @Override
+                
+    @Override 
     public void  visualizzaDettagli() {
         System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
                 + getAnnoPubblicazione() + ", codice:" + getCodice() + ", numero rivista: " + getNumero() +"]");
@@ -92,9 +100,9 @@ class Rivista extends Risorsa {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-
+ 
 }
-
+ 
 //classe Ebook figlia di Risorsa
 class Ebook extends Risorsa {
     //variabile univoca
@@ -105,7 +113,8 @@ class Ebook extends Risorsa {
         this.formato = formato;
     }
 
-    @Override
+                
+    @Override 
     public void visualizzaDettagli() {
         System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
                 + getAnnoPubblicazione() + ", codice:" + getCodice() + ", formato e-book: " + getFormato() +"]");
