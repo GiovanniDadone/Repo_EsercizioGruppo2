@@ -133,6 +133,7 @@ public class Biblioteca {
         for (Risorsa risorsa : risorseDisponibili) {
             if (risorsa.getTitolo().equalsIgnoreCase(titolo2)) {
                 risorsa.visualizzaDettagli();
+                return;
             }
         }
         System.out.println("Risorsa non trovata");
