@@ -1,4 +1,4 @@
-public abstract class Risorsa {
+public class Risorsa {
     private String titolo;
     private int annoPubblicazione;
     private String codice;
@@ -33,9 +33,10 @@ public abstract class Risorsa {
         this.codice = codice;
     }
 
-    public String visualizzaDettagli() {
-        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + titolo + ", annoPubblicazione:"
-                + annoPubblicazione + ", codice:" + codice + "]";
+    public void visualizzaDettagli() {
+        System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + titolo + ", annoPubblicazione:"
+                + annoPubblicazione + ", codice:" + codice + "]");
+
     }
 
 }
@@ -49,9 +50,9 @@ class Libro extends Risorsa {
     }
 
     @Override
-    public String visualizzaDettagli() {
-        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
-                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", autore: " + getAutore() +"]";
+    public void visualizzaDettagli() {
+        System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
+                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", autore: " + getAutore() +"]");
     }
 
     public String getAutore() {
@@ -73,9 +74,9 @@ class Rivista extends Risorsa {
     }
 
     @Override
-    public String visualizzaDettagli() {
-        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
-                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", numero rivista: " + getNumero() +"]";
+    public void  visualizzaDettagli() {
+        System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
+                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", numero rivista: " + getNumero() +"]");
     }
 
     public int getNumero() {
@@ -97,9 +98,9 @@ class Ebook extends Risorsa {
     }
 
     @Override
-    public String visualizzaDettagli() {
-        return "[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
-                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", formato e-book: " + getFormato() +"]";
+    public void visualizzaDettagli() {
+        System.out.println("[Tipo di Risorsa: " + getClass().getSimpleName() + ", titolo:" + getTitolo() + ", annoPubblicazione:"
+                + getAnnoPubblicazione() + ", codice:" + getCodice() + ", formato e-book: " + getFormato() +"]");
     }
 
     public String getFormato() {
